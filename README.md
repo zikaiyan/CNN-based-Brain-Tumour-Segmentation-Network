@@ -95,8 +95,20 @@ Next, we will focus on the training process. Batch\_size = 6 is chosen as they h
 
 ## Discussion
 
-The model we trained indicates a fairish accuracy. But there are still many further improvements we could make. For instance, because we are currently limited by GPU power, larger numbers for both batch size and number of epochs were not given a try, but doing those may give us a much better model. Furthermore, since a problem occurs after training the model for different patch sizes and several epochs, and also because of the time limit, we could not find a solution to solve that problem. So, there are other parameters we could adjust. For instance, learning rates and different optimizers could be given a try.
+The model we trained indicates a fairish accuracy. But there are still many further improvements we could make. For instance, because we are currently limited by GPU power, larger numbers for both batch size and number of epochs were not tried, but doing those may give us a much better model. Furthermore, since a problem occurs after training the model for different patch sizes and several epochs, and also because of the time limit, we could not find a solution to solve that problem. So, there are other parameters we could adjust. For instance, learning rates and different optimizers could be given a try.
 
 ## Conclusion
 
-Our project focuses on writing the code based on using a U-net neural network to train a model to complete brain tumor image segmentation in MR brain images. In conclusion, because of some limits, our result may not be precise enough, but there should definitely be some part of our self-written code that could be improved further.
+Our project focuses on writing the code using a U-net neural network to train a model to complete brain tumor image segmentation in MR brain images. In conclusion, because of some limits, our result may not be precise enough, but there should definitely be some part of our self-written code that could be improved further.
+
+## References
+
+1. Lécun Y, Bottou L, Bengio Y, et al. Gradient-based learning applied to document recognition[J]. Proceedings of the IEEE, 1998, 86(11): 2278-2324.
+2. Lei X L, Yu X S, Chi J N, Wang Y, Wu C D . 2019. Brain tumor segmentation based on prior sparse shapes. Journal of Image and Graphics, 24(12): 2222-2232. [DOI: 10.11834/jig.190070]
+3. Cao Qiwei, Wang Feng, Niu Jin. Brain tumor medical image segmentation optimization based on 3D convolutional neural network [J]. Modern Electronic Technology, 2020, 43(03): 74-77.
+4. Shuai Dongli, Li Qiang, Guan Xin. Brain tumor segmentation combined with convolutional neural network and fuzzy system[J]. Computer Science and Exploration, 2018, 12(04): 610-611
+5. Ragupathy, B,  Karunakaran, M.  A deep learning model integrating convolution neural network and multiple kernel K means clustering for segmenting brain tumor in magnetic resonance images. Int J Imaging Syst Technol.  2021; 31: 118– 127. https://doi.org/10.1002/ima.22498
+6. Wei Qian, Du Junrong, Yao Mengyang, Tang Yanru, Xiao Yanli, Peng Lei. The application of OpenCV and multi-scale CNN in brain tumor image processing. [J] China Science and Technology Investment, 2021, 06:168-169
+7. Lei X L, Yu X S, Chi J N, Wang Y, Wu C D . 2019. Brain tumor segmentation based on prior sparse shapes. Journal of Image and Graphics, 24(12): 2222-2232. [DOI: 10.11834/jig.190070]
+8. HU Chu-yan, SI Ming-ming,CHEN Wei. Brain MRI Tumor Segmentation Method Based on Superpixel and Mean Shift [J/OL]. Journal of  Chinese Computer Systems:1-9[2021-08-10].
+
