@@ -10,6 +10,7 @@ Final Project - Data Science Summer School 2021 @Imperial College London
 - [Results and Analysis](#results-and-analysis)
 - [Discussion](#Discussion)
 - [Conclusion](#Conclusion)
+- [References](#References)
 
 ![brain-tumour](images/brain-tumour.png)
 
