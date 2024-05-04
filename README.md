@@ -2,6 +2,17 @@
 
 Final Project - Data Science Summer School 2021 @Imperial College London
 
+## Table of Contents
+
+- [Abstract](#Abstract)
+- [Introduction](#Introduction)
+- [Methodology](#Methodology)
+- [Results and Analysis](#results-and-analysis)
+- [Discussion](#Discussion)
+- [Conclusion](#Conclusion)
+
+![brain-tumour](images/brain-tumour.png)
+
 ## Abstract
 
 Tumors are known to pose a major threat to health, especially in the brain. Brain tumor is one of the leading causes of cancer death. Accurate segmentation and quantitative analysis of brain tumors are critical for diagnosis and treatment planning. Our project focuses on designing a deep neural network to complete brain tumor image segmentation in MR brain images. To complete the final task of segmentation of brain tumors, we completed the following work. The experimental data for this project is more than 7000 MR images, so we need to divide the data set into a training set and a validation set. Image enhancement was performed on the training set. The second step is to design the U-NET network and construct the segmentation model of brain tumors. The third step is defining the project's loss and evaluation functions. Fourth, train and evaluate the model. At the same time, we designed an algorithm for image display.
@@ -62,7 +73,7 @@ After that, the predicted and true segmentation maps are printed using matplolib
 
 Since the segmentation needs to be a 0-1 map, we use a threshold function to convert the output(possibility) to the desired form.
 
-## Result
+## Result and Analysis
 
 In this section, we are trying to find out how batch size and number of epochs affect the performance of the trained model. Batch size refers to the number of samples that will be propagated in an iteration(training step), while the number of epochs refers to the number of complete passes through the training dataset.
 
