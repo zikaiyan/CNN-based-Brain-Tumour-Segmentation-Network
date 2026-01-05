@@ -72,7 +72,7 @@ Then, we use the classic unit to build our own model.
 
 ![unet](images/unet.png)
 
-#### Predicted
+#### Prediction
 
 After that, the predicted and true segmentation maps are printed using matplolib.pyplot, so that we can visualize the results and verify our outcomes. The accuracy of the training is also shown at this step.
 
