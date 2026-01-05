@@ -4,13 +4,13 @@ Final Project - Data Science Summer School 2021 @Imperial College London
 
 ## Table of Contents
 
-- [Abstract](#Abstract)
-- [Introduction](#Introduction)
-- [Methodology](#Methodology)
+- [Abstract](#abstract)
+- [Introduction](#introduction)
+- [Methodology](#methodology)
 - [Results and Analysis](#results-and-analysis)
-- [Discussion](#Discussion)
-- [Conclusion](#Conclusion)
-- [References](#References)
+- [Discussion](#discussion)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ![brain-tumour](images/brain-tumour.png)
 
@@ -50,19 +50,23 @@ The original images and their segmentation map are randomly shuffled and divided
 
 #### DataGenerator
 
-We defined the DataGenerator class. Initializing a DataGenerator instance requires an ID list, batch size, data shape(image shape and channels), and shuffle(as a boolean type) as arguments. Its method \_\_getitem\_\_(along with \_\_data\_generation) reads and delivers one batch of the data(shape = [batch\_size, 240, 240, 3]). The data augmentation is also done within the \_\_getitem\_\_method. We use ImageDataGenerator from keras.preprocessing.image to add noises and modify the brightness of the images.
+We defined the DataGenerator class. Initializing a DataGenerator instance requires an ID list, batch size, data shape(image shape and channels), and shuffle(as a boolean type) as arguments. Its method __getitem__(along with __data_generation) reads and delivers one batch of the data(shape = [batch_size, 240, 240, 3]). The data augmentation is also done within the __getitem__method. We use ImageDataGenerator from keras.preprocessing.image to add noises and modify the brightness of the images.
 
 #### Evaluate Function
 
-Next, we defined a metric(iou\_coef) to evaluate the similarity between the predicted and true segmentation map. It is defined as:
+Next, we defined a metric(iou_coef) to evaluate the similarity between the predicted and true segmentation map. It is defined as:
+
 $$
-\text{iou\_coef(y\_true,y\_pred)} =\frac{\text{intersection area}+\text{smooth}}{\text{union area}+\text{smooth}}
+\text{iou coef} \ (y_{true},y_{pred}) =\frac{\text{intersection area} \ + \ \text{smooth}}{\text{union area} \ + \ \text{smooth}}
 $$
-where smooth is a given constant, and in our experiment, smooth is set to 1, y\_true and y\_pred are the segmentation maps of one batch's data. We also define the loss function based on iou\_coef as:
+
+where smooth is a given constant, and in our experiment, smooth is set to 1, y_true and y_pred are the segmentation maps of one batch's data. We also define the loss function based on iou_coef as:
+
 $$
-Loss(y_true,y_pred)=-log(iou_coef(y_true,y_pred))
+Loss(y_{true},y_{pred})=-log(\text{iou coef} \ (y_{true},y_{pred}))
 $$
-In this way, the loss function will be 0 as iou\_coef reaches 1 and will be $+\infty$ If iou\_coef approaches 0.
+
+In this way, the loss function will be 0 as iou_coef reaches 1 and will be $+inf$ If iou_coef approaches 0.
 
 Then, we use the classic unit to build our own model.
 
@@ -74,7 +78,7 @@ After that, the predicted and true segmentation maps are printed using matplolib
 
 Since the segmentation needs to be a 0-1 map, we use a threshold function to convert the output(possibility) to the desired form.
 
-## Result and Analysis
+## Results and Analysis
 
 In this section, we are trying to find out how batch size and number of epochs affect the performance of the trained model. Batch size refers to the number of samples that will be propagated in an iteration(training step), while the number of epochs refers to the number of complete passes through the training dataset.
 
@@ -92,7 +96,7 @@ After seeing the loss, it is no surprise to see the accuracy. One thing that sho
 
 ![Fig5](images/Fig5.png)
 
-Next, we will focus on the training process. Batch\_size = 6 is chosen as they have the best performance in the last section, and we try to see the val\_loss and val\_IoU in each epoch. According to the above figures, convergence begins by the third epoch. Before the third epoch, the loss value decreases much more rapidly, but after the third epoch, the loss value begins to fluctuate.
+Next, we will focus on the training process. Batch_size = 6 is chosen as they have the best performance in the last section, and we try to see the val_loss and val_IoU in each epoch. According to the above figures, convergence begins by the third epoch. Before the third epoch, the loss value decreases much more rapidly, but after the third epoch, the loss value begins to fluctuate.
 
 ## Discussion
 
